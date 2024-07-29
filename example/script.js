@@ -366,3 +366,10 @@ alarmButton.addEventListener("click", function () {
   }
 });
 
+function deleteAllAlarms(){
+  
+    document.body.removeChild(guiBG);
+    localStorage.clear();
+  reload();
+}
+
