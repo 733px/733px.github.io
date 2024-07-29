@@ -372,4 +372,124 @@ function deleteAllAlarms(){
     localStorage.clear();
   reload();
 }
+var deleteAlarmButton = document.createElement("button");
+deleteAlarmButton.style.position = "absolute";
+deleteAlarmButton.style.color = "white";
+deleteAlarmButton.style.top = "20px";
+deleteAlarmButton.style.left = "100px";
+deleteAlarmButton.style.width = "100px";
+deleteAlarmButton.style.height = "25px";
+deleteAlarmButton.style.border = "none";
+deleteAlarmButton.style.borderRadius = "5px";
+deleteAlarmButton.style.fontSize = "15px";
+deleteAlarmButton.style.cursor = "pointer";
+deleteAlarmButton.innerHTML = "Delete Alarms";
+deleteAlarmButton.style.backgroundColor = "#111111";
+document.body.appendChild(deleteAlarmButton);
 
+deleteAlarmButton.addEventListener("click", function () {  var guiBG = document.createElement("button");
+  if (usingpx == true) {
+    guiBG.style.top = top + "px";
+    guiBG.style.left = left + "px";
+  } else {
+    guiBG.style.top = top + "%";
+    guiBG.style.left = left + "%";
+  }
+  guiBG.style.position = "fixed";
+  guiBG.style.transform = "translate(-50%, -50%)";
+  guiBG.style.backgroundColor = "#141414";
+  guiBG.style.transition = "background-color 0.25s";
+  guiBG.style.border = "2px solid white";
+  guiBG.style.padding = "50px 150px";
+  guiBG.style.borderRadius = "20px";
+  document.body.appendChild(guiBG);
+
+  var hours = document.createElement("input");
+  hours.type = "text";
+  hours.style.position = "absolute";
+  hours.value = horseValue;
+  hours.style.top = "50px";
+  hours.style.left = "10px";
+  hours.style.width = "25px";
+  guiBG.appendChild(hours);
+
+  var mins = document.createElement("input");
+  mins.type = "text";
+  mins.style.position = "absolute";
+  mins.value = minValue;
+  mins.style.top = "50px";
+  mins.style.left = "50px";
+  mins.style.width = "25px";
+  guiBG.appendChild(mins);
+
+  var secs = document.createElement("input");
+  secs.type = "text";
+  secs.style.position = "absolute";
+  secs.value = secValue;
+  secs.style.top = "50px";
+  secs.style.left = "90px";
+  secs.style.width = "25px";
+  guiBG.appendChild(secs);
+
+  var button = document.createElement("button");
+  button.style.position = "absolute";
+  button.style.color = "white";
+  button.style.transition = "background-color 0.25s";
+  button.style.top = "20px";
+  button.style.left = "150px";
+  button.style.width = "30%";
+  button.style.height = "25%";
+  button.style.backgroundColor = "#333333";
+  button.style.border = "none";
+  button.style.borderRadius = "5px";
+  button.style.fontSize = "15px";
+  button.style.cursor = "pointer";
+  button.innerHTML = "Type";
+  button.style.backgroundColor = "#505050";
+  guiBG.appendChild(button);
+
+  button.addEventListener("click", function () {});
+
+  var button = document.createElement("button");
+  button.style.position = "absolute";
+  button.style.color = "#000000";
+  button.style.transition = "background-color 0.25s";
+  button.style.top = "10px";
+  button.style.left = "260px";
+  button.style.width = "10%";
+  button.style.height = "25%";
+  button.style.backgroundColor = "#333333";
+  button.style.border = "none";
+  button.style.borderRadius = "5px";
+  button.style.fontSize = "15px";
+  button.style.cursor = "pointer";
+  button.innerHTML = "X";
+  button.style.backgroundColor = "#505050";
+  guiBG.appendChild(button);
+
+  button.addEventListener("click", function () {
+    on = false;
+    document.body.removeChild(guiBG);
+    localStorage.clear();
+  });
+
+  var button = document.createElement("button");
+  button.style.position = "absolute";
+  button.style.color = "white";
+  button.style.transition = "background-color 0.25s";
+  button.style.top = "60px";
+  button.style.left = "150px";
+  //what does going around in the source code grant you
+  button.style.width = "30%";
+  button.style.height = "25%";
+  button.style.backgroundColor = "#333333";
+  button.style.border = "none";
+  button.style.borderRadius = "5px";
+  button.style.fontSize = "15px";
+  button.style.cursor = "pointer";
+  button.innerHTML = "Turn on";
+  guiBG.appendChild(button);
+
+  guiBG.style.backgroundColor = "#333333";
+  button.style.backgroundColor = "#141414";
+});
