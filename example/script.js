@@ -366,17 +366,3 @@ alarmButton.addEventListener("click", function () {
   }
 });
 
-
-function closeDropdown() {
-    document.querySelector('.dropdown-content').style.display = 'none';
-}
-
-document.querySelector('.dropdown-btn').addEventListener('click', function() {
-    const dropdownContent = document.querySelector('.dropdown-content');
-    if (dropdownContent.style.display === 'block') {
-        dropdownContent.style.display = 'none';
-    } else {
-        dropdownContent.style.display = 'block';
-    }
-});
-
