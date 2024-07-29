@@ -1,0 +1,17 @@
+body {
+    background: 
+        linear-gradient(to right, rgba(255,255,255,0.2) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, transparent 75%, transparent),
+        linear-gradient(to left, rgba(255,255,255,0.2) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, transparent 75%, transparent),
+        linear-gradient(to left top, #ffffff, #000000);
+    background-size: 1000% 1000%; 
+    animation: gradientAnimation 40s linear infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 0% -1000%;
+    }
+}
